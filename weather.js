@@ -55,7 +55,7 @@ $(document).ready(function(){
                 })
 
                 if (weatherType="clear sky"){
-                    $('body').style.css('background-image', 'url(img/clear.jpeg)');
+                    $('body').css('background-image', 'url(img/clear.jpeg)');
                 } else if (weatherType="few clouds"){
                     $('body').css('background-image', 'url(img/few.jpeg)');
                 } else if (weatherType="scattered clouds"){
