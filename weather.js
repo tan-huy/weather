@@ -19,9 +19,9 @@ $(document).ready(function(){
 
             $.getJSON(api, function(object){
         
-                var weatherType= object.weather[0].description;
-                var kTemp= object.main.temp;
-                var windSpeed= object.wind.speed;
+                var weatherType = object.weather[0].description;
+                var kTemp = object.main.temp;
+                var windSpeed = object.wind.speed;
                 var city = object.name;
         
                 fTemp = ((1.8 * (kTemp - 273.15)) + 32).toFixed(1);
@@ -54,37 +54,39 @@ $(document).ready(function(){
                     }
                 })
 
-                if (weatherType="clear sky"){
+                if (weatherType==="clear sky"){
                     $('body').css('background-image', 'url(img/clear.jpeg)');
-                } else if (weatherType="few clouds"){
+                } else if (weatherType==="few clouds"){
                     $('body').css('background-image', 'url(img/few.jpeg)');
-                } else if (weatherType="scattered clouds"){
+                } else if (weatherType==="overcast clouds"){
+                    $('body').css('background-image', 'url(img/overcast.jpeg)');
+                } else if (weatherType==="scattered clouds"){
                     $('body').css('background-image', 'url(img/scattered.jpeg)');
-                } else if (weatherType="broken clouds"){
+                } else if (weatherType==="broken clouds"){
                     $('body').css('background-image', 'url(img/broken.jpeg)');
-                } else if (weatherType="rain"){
+                } else if (weatherType==="rain"){
                     $('body').css('background-image', 'url(img/rain.jpeg)');
-                } else if (weatherType="thunderstorm"){
+                } else if (weatherType==="thunderstorm"){
                     $('body').css('background-image', 'url(img/thunder.jpeg)');
-                } else if (weatherType="snow"){
+                } else if (weatherType==="snow"){
                     $('body').css('background-image', 'url(img/snow.jpeg)');
-                } else if (weatherType="mist"){
+                } else if (weatherType==="mist"){
                     $('body').css('background-image', 'url(img/mist.jpeg)');
-                } else if (weatherType="smoke"){
+                } else if (weatherType==="smoke"){
                     $('body').css('background-image', 'url(img/smoke.jpeg)');
-                } else if (weatherType=haze){
+                } else if (weatherType==="haze"){
                     $('body').css('background-image', 'url(img/haze.jpeg)');
-                } else if (weatherType="sand", "dust whirls"){
+                } else if (weatherType==="sand", "dust whirls"){
                     $('body').css('background-image', 'url(img/sand.jpeg)');
-                } else if (weatherType="fog"){
+                } else if (weatherType==="fog"){
                     $('body').css('background-image', 'url(img/fog.jpeg)');
-                } else if (weatherType="sand"){
+                } else if (weatherType==="sand"){
                     $('body').css('background-image', 'url(img/sand.jpeg)');
-                } else if (weatherType="dust"){
+                } else if (weatherType==="dust"){
                     $('body').css('background-image', 'url(img/dust.jpeg)');
-                } else if (weatherType="volcanic ash"){
+                } else if (weatherType==="volcanic ash"){
                     $('body').css('background-image', 'url(img/ash.jpeg)');
-                } else if (weatherType="squalls"){
+                } else if (weatherType==="squalls"){
                     $('body').css('background-image', 'url(img/squall.jpeg)');
 
                 };
