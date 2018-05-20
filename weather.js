@@ -28,6 +28,7 @@ $(document).ready(function(){
                 cTemp = (kTemp - 273.15).toFixed(1);
                 mphWind = (2.237*(windSpeed)).toFixed(1);
 
+                $("#location").html("Weather for " + city);
                 $("#city").html(city);
                 $("#weatherType").html(weatherType);
                 $("#fTemp").html(fTemp + " &#8457");
